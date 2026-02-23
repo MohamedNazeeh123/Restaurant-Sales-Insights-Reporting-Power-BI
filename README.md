@@ -1,14 +1,14 @@
 # Restaurant-Sales-Insights-Reporting-Power-BI
-🍽️ Restaurant Sales Insights – Power BI
+#🍽️ Restaurant Sales Insights – Power BI
 
 An end-to-end Business Intelligence project analyzing restaurant sales data using Power BI to generate actionable insights and interactive dashboards.
 
-📌 Project Overview
+#📌 Project Overview
 
 This project focuses on transforming raw restaurant sales data into meaningful business insights.
 The workflow covers data cleaning, data modeling, KPI development, and interactive reporting to support data-driven decision-making.
 
-📂 Data Source
+#📂 Data Source
 
 The dataset was imported from CSV files and consists of two main tables:
 
@@ -16,7 +16,7 @@ menu_items (Dimension Table)
 
 order_details (Fact Table)
 
-🧹 Data Preparation
+#🧹 Data Preparation
 
 Data cleaning and transformation were performed using Power Query:
 
@@ -28,7 +28,7 @@ Created calculated column LineCost using item price
 
 Built relationships between fact and dimension tables
 
-📅 Date Dimension Table
+#📅 Date Dimension Table
 
 A dedicated Date Table was created to enhance time-based analysis, including the following columns:
 
@@ -48,7 +48,7 @@ Daily Time Classification
 
 This enables flexible time intelligence and filtering capabilities.
 
-📊 Key Performance Indicators (KPIs)
+#📊 Key Performance Indicators (KPIs)
 
 The following measures were created using DAX:
 
@@ -74,7 +74,7 @@ Total revenue
 
 Total number of orders
 
-📈 Insights & Analysis
+#📈 Insights & Analysis
 
 The dashboard provides the following analytical insights:
 
@@ -98,7 +98,7 @@ Dynamic switching between measures
 
 Fully interactive dashboard experience
 
-🛠️ Tools & Technologies
+#🛠️ Tools & Technologies
 
 Power BI
 
@@ -108,7 +108,7 @@ DAX
 
 Data Modeling
 
-🚀 Business Value
+#🚀 Business Value
 
 This project demonstrates:
 
