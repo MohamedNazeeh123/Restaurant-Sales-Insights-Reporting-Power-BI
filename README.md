@@ -1,14 +1,14 @@
 # Restaurant-Sales-Insights-Reporting-Power-BI
-🍽️ Restaurant Sales Insights – Power BI
+## 🍽️ Restaurant Sales Insights – Power BI
 
 An end-to-end Business Intelligence project analyzing restaurant sales data to uncover actionable insights and support data-driven decision-making using Power BI.
 
-📌 Project Overview
+## 📌 Project Overview
 
 This project demonstrates the complete BI workflow starting from raw CSV files to an interactive analytical dashboard.
 The objective is to analyze restaurant sales performance, track KPIs, and extract meaningful business insights.
 
-📂 Data Source
+## 📂 Data Source
 
 The dataset was imported from structured CSV files and consists of two main tables:
 
@@ -16,7 +16,7 @@ menu_items (Dimension Table) – Contains item details such as price and categor
 
 order_details (Fact Table) – Contains transactional sales data.
 
-🧹 Data Preparation & Cleaning
+## 🧹 Data Preparation & Cleaning
 
 Data transformation was performed using Power Query:
 
@@ -28,7 +28,7 @@ Creating calculated column: LineCost = RELATED(menu_items[price])
 
 Establishing proper relationships (Star Schema Model)
 
-🗓️ Date Dimension
+## 🗓️ Date Dimension
 
 A dedicated Date Table was created to enhance time intelligence and reporting flexibility.
 
@@ -50,7 +50,7 @@ Daily Time Classification
 
 This enables dynamic filtering and advanced time-based analysis.
 
-📊 Key Performance Indicators (KPIs)
+## 📊 Key Performance Indicators (KPIs)
 
 The following DAX measures were created:
 
@@ -66,7 +66,7 @@ TotalOrders → Total distinct orders
 
 These KPIs provide a clear overview of sales performance and business activity.
 
-📈 Insights & Dashboard Analysis
+## 📈 Insights & Dashboard Analysis
 
 The interactive dashboard provides:
 
@@ -90,7 +90,7 @@ Dynamic Switching Between Measures
 
 Fully Interactive Visual Experience
 
-🏗️ Data Model
+## 🏗️ Data Model
 
 The project follows a Star Schema approach:
 
@@ -98,7 +98,7 @@ Fact Table → order_details
 Dimension Table → menu_items
 Date Table → Custom-built for time intelligence
 
-🛠️ Tools & Technologies
+## 🛠️ Tools & Technologies
 
 Power BI
 
@@ -110,7 +110,7 @@ Data Modeling
 
 CSV Data Sources
 
-🎯 Key Takeaways
+## 🎯 Key Takeaways
 
 ✔ Building a structured data model
 ✔ Creating advanced DAX measures
@@ -118,7 +118,7 @@ CSV Data Sources
 ✔ Developing interactive dashboards
 ✔ Translating raw data into business insights
 
-🚀 Future Improvements
+## 🚀 Future Improvements
 
 Profitability analysis (Cost vs Revenue)
 
