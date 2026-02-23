@@ -1,36 +1,38 @@
 # Restaurant-Sales-Insights-Reporting-Power-BI
-#🍽️ Restaurant Sales Insights – Power BI
+🍽️ Restaurant Sales Insights – Power BI
 
-An end-to-end Business Intelligence project analyzing restaurant sales data using Power BI to generate actionable insights and interactive dashboards.
+An end-to-end Business Intelligence project analyzing restaurant sales data to uncover actionable insights and support data-driven decision-making using Power BI.
 
-#📌 Project Overview
+📌 Project Overview
 
-This project focuses on transforming raw restaurant sales data into meaningful business insights.
-The workflow covers data cleaning, data modeling, KPI development, and interactive reporting to support data-driven decision-making.
+This project demonstrates the complete BI workflow starting from raw CSV files to an interactive analytical dashboard.
+The objective is to analyze restaurant sales performance, track KPIs, and extract meaningful business insights.
 
-#📂 Data Source
+📂 Data Source
 
-The dataset was imported from CSV files and consists of two main tables:
+The dataset was imported from structured CSV files and consists of two main tables:
 
-menu_items (Dimension Table)
+menu_items (Dimension Table) – Contains item details such as price and category.
 
-order_details (Fact Table)
+order_details (Fact Table) – Contains transactional sales data.
 
-#🧹 Data Preparation
+🧹 Data Preparation & Cleaning
 
-Data cleaning and transformation were performed using Power Query:
+Data transformation was performed using Power Query:
 
-Handled missing and inconsistent values
+Data type correction
 
-Ensured proper data types
+Removing inconsistencies
 
-Created calculated column LineCost using item price
+Creating calculated column: LineCost = RELATED(menu_items[price])
 
-Built relationships between fact and dimension tables
+Establishing proper relationships (Star Schema Model)
 
-#📅 Date Dimension Table
+🗓️ Date Dimension
 
-A dedicated Date Table was created to enhance time-based analysis, including the following columns:
+A dedicated Date Table was created to enhance time intelligence and reporting flexibility.
+
+Extracted Columns:
 
 Year
 
@@ -46,37 +48,27 @@ Events
 
 Daily Time Classification
 
-This enables flexible time intelligence and filtering capabilities.
+This enables dynamic filtering and advanced time-based analysis.
 
-#📊 Key Performance Indicators (KPIs)
+📊 Key Performance Indicators (KPIs)
 
-The following measures were created using DAX:
+The following DAX measures were created:
 
-#SelledItems = COUNT('order_details(fact)'[order_details_id])
+#SelledItems → Total number of sold items
 
-MenuItemsUsed = DISTINCTCOUNT('order_details(fact)'[item_id])
+MenuItemsUsed → Distinct menu items sold
 
-MostExpensiveItem = MAX('menu_items(dim)'[price])
+MostExpensiveItem → Maximum item price
 
-TotalIncome = SUM('order_details(fact)'[LineCost])
+TotalIncome → Total revenue generated
 
-TotalOrders = DISTINCTCOUNT('order_details(fact)'[order_id])
+TotalOrders → Total distinct orders
 
-These KPIs help measure:
+These KPIs provide a clear overview of sales performance and business activity.
 
-Total items sold
+📈 Insights & Dashboard Analysis
 
-Unique menu items used
-
-Maximum item price
-
-Total revenue
-
-Total number of orders
-
-#📈 Insights & Analysis
-
-The dashboard provides the following analytical insights:
+The interactive dashboard provides:
 
 📅 Total Orders by Date
 
@@ -84,21 +76,29 @@ The dashboard provides the following analytical insights:
 
 🕒 Total Orders by Daily Time
 
-📊 Dynamic Measure Switching by Day of Week
+🔄 Dynamic Measure Switching by Day of Week
 
-🔄 Switch Analysis by Category & Item Name
+📊 Category & Item-Level Analysis
 
 🎛️ Interactive Features
 
-Category & Item-level filtering
+Date Slicer
 
-Date slicer for time-based analysis
+Category & Item Filters
 
-Dynamic switching between measures
+Dynamic Switching Between Measures
 
-Fully interactive dashboard experience
+Fully Interactive Visual Experience
 
-#🛠️ Tools & Technologies
+🏗️ Data Model
+
+The project follows a Star Schema approach:
+
+Fact Table → order_details
+Dimension Table → menu_items
+Date Table → Custom-built for time intelligence
+
+🛠️ Tools & Technologies
 
 Power BI
 
@@ -108,14 +108,22 @@ DAX
 
 Data Modeling
 
-#🚀 Business Value
+CSV Data Sources
 
-This project demonstrates:
+🎯 Key Takeaways
 
-Building a clean star schema model
+✔ Building a structured data model
+✔ Creating advanced DAX measures
+✔ Designing business-driven KPIs
+✔ Developing interactive dashboards
+✔ Translating raw data into business insights
 
-Creating dynamic KPIs using DAX
+🚀 Future Improvements
 
-Designing interactive dashboards
+Profitability analysis (Cost vs Revenue)
 
-Extracting meaningful business insights from raw data
+Customer segmentation
+
+Advanced time intelligence (YoY / MoM Growth)
+
+Performance benchmarking
